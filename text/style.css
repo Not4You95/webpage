@@ -1,63 +1,30 @@
-body {
-  font-family: Arial;
-  background-color: darkgrey;
-}
-
-h1 {
-  color: white;
-  font-size: 23px;
-  text-align: center;
-}
-p {
-  color: orange;
-  font-size: 16px;
-  background-color: #246aae;
-  text-align: center;
-}
-
-.title {
-  color: orange;
-}
-
-table, th, td {
-  border: 2px solid white;
-  text-align: center;
-  color: orange;
-}
-
-img {
-    max-width:200px;
-    float: left;
-    margin-right: 15px;
-}
-
-h3 {
-  color: white;
-  font-size: 16px;
-}
-
-/*
-Theme Name: Creativeily 
+/* 
+Theme Name: Fullscreenly
+Theme URI: 
+Description: Fullscreenly is your seo friendly & responsive theme made for blogging. The code is clean so your website will be quick and load fast with great page speed. The theme is simple to setup but has a lot of features for both affiliate marketing, i.e. lots of advertisement space for affiliate programs such as Google AdSense - of course this kind of website requires a SEO optimized, creative & modern theme which Fullscreenly is.
 Author: ThemeEverest
-Author URI: https://superbthemes.com/
-Theme URI: https://superbthemes.com/creativeily/creativeily-info/
-Description: Creativeily is your seo friendly & responsive theme made for blogging, newspapers or journalist writing. The code is clean so your website will be quick and load fast with great page speed. The theme is simple to setup but has a lot of features for both affiliate marketing, i.e. lots of advertisement space for affiliate programs such as Google AdSense - of course this kind of website requires a SEO optimized, creative & modern theme which Creativeily is. Creativeily is a true multi purpose theme, Beaver Pagebuilder is implemented so you can create your corporate business landing page, an elegant agency one page or a simply photography portfolio. Authors & bloggers can easily create a simple and minimalistic blog and customize it to a niche with the header, so you can write about anything from food, travel, fashion, lifestyle, reviews, products or other entertainment niches. To sum it up the theme is SEO optimised, responsive so it works on tablets, desktop, mobile phones, on every device, such as an Apple or Android. The theme allows you to create a news paper or 1 page / single page, coach, school or education conference website with very low amount of effort required since the design looks beautiful out of box.
-Version: 2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: creativeily
-Domain Path: /languages
+Author URI: https://superbthemes.com/
+Template: creativeily
+Version: 1.1
 Tags: one-column, two-columns, right-sidebar, flexible-header, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: fullscreenly
 */
 
+ 
 
 html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   font-size: 16px;
- 
 }
+
+html * {
+  box-shadow:0px 0px 0px #fff !important;
+}
+
 @media screen and (min-width: 25em){
   html { font-size: calc( 14px + (16 - 14) * (100vw - 400px) / (800 - 400) ); }
 }
@@ -359,7 +326,7 @@ footer {
   margin-right: 3em;
   margin-left: 2.5em;
   margin-bottom: 2em;
-  font-size: 1em;
+  font-size: 15px;
 
 }
 
@@ -686,6 +653,8 @@ padding:20px 0;
 .header .info h1 {
   margin:0;
   font-size:55px;
+    font-family:'Roboto';
+  font-weight:900;
 }
 .header .meta p {
   font-size:20px;
@@ -797,12 +766,9 @@ padding:20px 0;
 }
 
 /**---- Menu Icon ----**/
-.footer-info-right a {
-    text-decoration: underline;
-}
+
 .menu-icon {
   display: block;
-  outline:none;
   position: relative;
   width: 25px;
   height: 100%;
@@ -1010,57 +976,22 @@ a {
   text-align: justify;
 }
 
-/* Accessibility */
-/* Text meant only for screen readers. */
 .screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
   overflow: hidden;
-  padding: 0;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  clip-path: none;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  right: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */
-}
-
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-  outline: 0;
-}
 .postinfo span:after {
-  content: '•';
+  content: 'â€¢';
   margin: 0 7px 0 11px;
   font-size: 12px;
   display: inline-block;
 }
 .entry-title {
   margin: 0;
-  font-size: 30px;
+  font-size: 35px;
 }
 .gallery-caption {
   display: block;
@@ -1137,7 +1068,9 @@ article div, article header, article img, article p, .widget, .widget ul li {
   transition: color .1s ease-in 0s;
   -webkit-font-smoothing: antialiased;
 }
-
+.home.page aside#secondary {
+    display: none;
+}
 /* Buttons */
 
 .button, button {
@@ -1153,10 +1086,6 @@ article div, article header, article img, article p, .widget, .widget ul li {
   cursor: pointer;
   -webkit-transition:all 0.2s ease-in-out;
   transition:all 0.2s ease-in-out;
-}
-
-body .image-creativeily-header {
-  background-size:cover !important;
 }
 
 .nav-links {
@@ -1270,6 +1199,7 @@ form input, form textarea {
 .search-field {
   display: inline;
   margin: 0;
+  border:1px solid #dedede;
   padding: 12px 18px;
   vertical-align: bottom;
 }
@@ -1335,6 +1265,20 @@ table#wp-calendar {
   border-radius:3px;
   box-shadow: 0 4px 10px rgba(0,0,0,.05);
 }
+.featured-img-box.featured-img-content {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: -6px;
+    background: #fff;
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.featured-img-box.featured-img-content img {
+  width:100%;
+  max-width:100%;
+}
 .wrapmain article {
   background:#fff;
   border-radius:3px;
@@ -1349,8 +1293,8 @@ table#wp-calendar {
   text-align:center;
 }
 .wrapmain article .entry-content p {
-  font-size: 15px;
-  color: #989898;
+  font-size: 16px;
+  color: #636363;
   text-align: left;
 }
 .featured-img-box {
@@ -1376,11 +1320,12 @@ table#wp-calendar {
 .has-sidebar #secondary .widget h2 {
   font-size: 18px;
   color: #000;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #eee;
   padding-bottom: 10px;
   line-height:130%;
   margin-top:30px;
   margin-bottom:15px;
+  text-transform:uppercase;
 }
 .widget ul li:first-of-type {
   padding-top: 0px;
@@ -1440,7 +1385,7 @@ table#wp-calendar {
 }
 .single .wrapmain article, .single .wrapmain article p, .single .wrapmain article dd, .single .wrapmain article li, .single .wrapmain article ul, .single .wrapmain article ol, .single .wrapmain article address, .single .wrapmain article table, .single .wrapmain article th, .single .wrapmain article td, .single .wrapmain article blockquote, .single .wrapmain article span, .single .wrapmain article div 
 .page .wrapmain article, .page .wrapmain article p, .page .wrapmain article dd, .page .wrapmain article li, .page .wrapmain article ul, .page .wrapmain article ol, .page .wrapmain article address, .page .wrapmain article table, .page .wrapmain article th, .page .wrapmain article td, .page .wrapmain article blockquote, .page .wrapmain article span, .page .wrapmain article div {
-  font-size:14px;
+  font-size:16px;
   color:#333;
 }
 .single .wrapmain article a,
@@ -1502,11 +1447,12 @@ img.avatar.photo {
 .nav-links span.button {
   display: inline-block;
   padding: 11px 20px;
-  color: #fff;
+  color: #333;
   border-radius: 4px;
-  background-color: #00BC87;
+  background-color: #ffc300;
   letter-spacing: 0.5px;
   border: 0px;
+  outline: none;
   font-size: 14px;
   line-height: 120%;
   max-width: 97%;
@@ -1555,13 +1501,13 @@ button:hover,
 .button:hover {
  display: inline-block;
  padding: 11px 20px;
- color: #fff;
+ color: #333;
  border-radius: 4px;
- background-color: #00BC87;
+ background-color: #ffc300;
  box-sizing: border-box;
  letter-spacing: 0.5px;
  border:0px;
-
+ outline:none;
  font-size: 14px;
  line-height: 120%;
  font-weight: 600;
@@ -1594,7 +1540,7 @@ a.button.button-readmore {
 }
 .footer-column-wrapper .widget, .footer-column-wrapper .widget li, .footer-column-wrapper .widget p, .footer-column-wrapper abbr, .footer-column-wrapper cite, .footer-column-wrapper table caption, .footer-column-wrapper td, .footer-column-wrapper th {
   color: #b9b9b9;
-  font-size: 14px;
+  font-size: 15px;
 }
 .footer-column-wrapper .widget a {
   color:#fff;
@@ -1641,7 +1587,7 @@ footer .footer-wrapmain {
     margin-right: 1em;
     margin-left: 2.5em;
     margin-bottom: 2.5em;
-    font-size: 0.7em;
+    font-size: 15px;
     line-height: 1.5em;
   }
 
@@ -1665,7 +1611,9 @@ footer .footer-wrapmain {
 }
 
 @media screen and (max-width: 800px) {
-
+.entry-title {
+  font-size:25px;
+}
 .footer-column-wrapper {
   display:block;
 }
