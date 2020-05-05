@@ -485,12 +485,10 @@
                             <article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorised">
 
                                 <header class="entry-header">
-                                    <h2 class="entry-title"><a href="https://not4you.se/?p=1" rel="bookmark">Hello world2020!</a></h2>
+                                    <h2 class="entry-title"><a href="https://not4you.se/?p=1" rel="bookmark">Add new student!</a></h2>
                                     <div class="postinfo">
-
-                                        <span> <time class="entry-date published updated" datetime="2020-04-30T14:29:55+01:00">30
-                                                April 2020</time></span><span>
-                                            jonas.se95</span><span> <a href="https://not4you.se/?cat=1" rel="category">Uncategorised</a></span>
+                                    <!-- add text -->
+                                       
                                     </div>
 
 
@@ -535,7 +533,7 @@
                                         <p>Lunch Cost:
                                             <input type="text" name="lunch" size="30" value="" />
                                         </p>
-                                        <p class="button button-readmore">>
+                                        <p class="button button-readmore">
                                             <input type="submit" name="submit" value="Send" />
                                         </p>
                                     </form>
