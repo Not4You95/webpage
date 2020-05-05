@@ -144,7 +144,7 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../mysqli_connect.php');
+        require_once('mysqli_connect.php');
         
         $query = "INSERT INTO students (first_name, last_name, email,
         street, city, state, zip, phone, birth_date, sex, date_entered,
