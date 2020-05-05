@@ -533,9 +533,12 @@
                                         <p>Lunch Cost:
                                             <input type="text" name="lunch" size="30" value="" />
                                         </p>
-                                        <p class="button button-readmore">
-                                            <input type="submit" name="submit" value="Send" />
+                                        <p>
+                                            <input type="submit" name="submit" value="Send" class="button button-readmore"/>
                                         </p>
+
+                                       
+
                                     </form>
 
 
