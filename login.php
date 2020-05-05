@@ -420,12 +420,15 @@
 
 <body>
     <div id="page" class="site has-sidebar">
-        <div class="header">
+    <div class="header">
             <div class="image-creativeily-header"></div>
             <div class="header-top">
                 <!-- logo -->
+
                 <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
+
                 <!-- Mobile Bar & Menu Icon -->
+
                 <input type="checkbox" class="menu-toggle" id="menu-toggle">
                 <div class="mobile-bar">
                     <label tabindex="0" class="menu-icon">
@@ -433,24 +436,48 @@
                     </label>
                 </div>
                 <div class="header-menu">
-                    <nav id="nav" class="top-navigation" role="navigation" aria-label="Top Menu">
-                        <span id="creativeily-menu-back"><span class="dashicons dashicons-arrow-left-alt2"></span></span>
-                        <span id="creativeily-menu-home"><span class="dashicons dashicons-admin-home"></span></span>
+                    <nav id="nav" class="top-navigation" role="navigation"
+                        aria-label="Top Menu">
+                        <span id="creativeily-menu-back"><span
+                                class="dashicons dashicons-arrow-left-alt2"></span></span>
+                        <span id="creativeily-menu-home"><span
+                                class="dashicons dashicons-admin-home"></span></span>
+
                         <div id="top-menu" class="menu">
                             <ul id="menu-menu-1" class="">
-                                <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
-                                    <a href="http://not4you.se/" aria-current="page">Home</a></li>
-                                <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
-                                    <a href="https://not4you.se/getstudentinfo.php">Show
-                                        table</a></li>
-                                <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                    <a href="https://not4you.se/login.php">LOGIN</a>
+                                <li id="menu-item-18"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
+                                    <a href="http://not4you.se/"
+                                        aria-current="page">Home</a></li>
+                                <li id="menu-item-19"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+                                    <a
+                                    href="https://not4you.se/getstudentinfo.php">Show
+                                    table</a></li>
+                                <li id="menu-item-24"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                    <a
+                                        href="https://not4you.se/login.php">LOGIN</a>
                                 </li>
                             </ul>
                         </div> <a href="#" id="accessibility-close-menu"></a>
                     </nav><!-- #site-navigation -->
                 </div>
+
+
             </div>
+
+            <div class="info">
+                <h1>YOUR HOME IN YOUR HANDS</h1>
+
+                <div class="meta">
+                    <p class="site-description">The power of internet</p>
+                </div>
+
+
+            </div>
+            <a href="#start" id="section06"><span></span></a>
+        </div><!-- .custom-header -->
             <form action="http://not4you.se/studentadded.php" method="post">
                 <b>Add a New Student</b>
                 <p>First Name:
