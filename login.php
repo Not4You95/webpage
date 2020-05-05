@@ -1,4 +1,5 @@
 <html lang="en-GB" class="no-js no-svg">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +14,54 @@
         title="YOUR HOME IN YOUR HANDS &raquo; Comments Feed"
         href="https://not4you.se/?feed=comments-rss2" />-->
     <script type="text/javascript">
-        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/not4you.se\/js\/wp-emoji-release.min.js?ver=5.4.1" } };
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/not4you.se\/js\/wp-emoji-release.min.js?ver=5.4.1"
+            }
+        };
         /*! This file is auto-generated */
-        !function (e, a, t) { var r, n, o, i, p = a.createElement("canvas"), s = p.getContext && p.getContext("2d"); function c(e, t) { var a = String.fromCharCode; s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0); var r = p.toDataURL(); return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL() } function l(e) { if (!s || !s.fillText) return !1; switch (s.textBaseline = "top", s.font = "600 32px Arial", e) { case "flag": return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447])); case "emoji": return !c([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340]) }return !1 } function d(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (i = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, o = 0; o < i.length; o++)t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji))) }(window, document, window._wpemojiSettings);
+        ! function(e, a, t) {
+            var r, n, o, i, p = a.createElement("canvas"),
+                s = p.getContext && p.getContext("2d");
+
+            function c(e, t) {
+                var a = String.fromCharCode;
+                s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0);
+                var r = p.toDataURL();
+                return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL()
+            }
+
+            function l(e) {
+                if (!s || !s.fillText) return !1;
+                switch (s.textBaseline = "top", s.font = "600 32px Arial", e) {
+                    case "flag":
+                        return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]));
+                    case "emoji":
+                        return !c([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340])
+                }
+                return !1
+            }
+
+            function d(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (i = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, o = 0; o < i.length; o++) t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function() {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                "complete" === a.readyState && t.readyCallback()
+            })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji)))
+        }(window, document, window._wpemojiSettings);
     </script>
     <style type="text/css">
         img.wp-smiley,
@@ -31,45 +77,25 @@
             padding: 0 !important;
         }
     </style>
-    <link rel='stylesheet' id='dashicons-css'
-        href='https://not4you.se/text/dashicons.min.css?ver=5.4.1'
-        type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css' href='https://not4you.se/text/dashicons.min.css?ver=5.4.1' type='text/css' media='all' />
     <!--- <link rel='stylesheet' id='admin-bar-css'  href='https://not4you.se/wp-includes/css/admin-bar.min.css?ver=5.4.1' type='text/css' media='all' />-->
-    <link rel='stylesheet' id='wp-block-library-css'
-        href='https://not4you.se/text/style.min.css?ver=5.4.1'
-		type='text/css' media='all' />
-		
+    <link rel='stylesheet' id='wp-block-library-css' href='https://not4you.se/text/style.min.css?ver=5.4.1' type='text/css' media='all' />
+
     <!--<link rel='stylesheet' id='wpforms-admin-bar-css'
         href='https://not4you.se/wp-content/plugins/wpforms-lite/assets/css/admin-bar.min.css?ver=1.6.0.1'
 		type='text/css' media='all' />-->
-		
-    <link rel='stylesheet' id='fullscreenly-parent-style-css'
-        href='https://not4you.se/text/style.css?ver=5.4.1'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='fullscreenly-google-fonts-css'
-        href='//fonts.googleapis.com/css?family=Roboto%3A900&#038;display=swap&#038;ver=5.4.1'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='creativeily-google-fonts-css'
-        href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C400i%2C700%2C700i%2C900&#038;ver=5.4.1'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='creativeily-style-css'
-        href='https://not4you.se/text/style.css?ver=5.4.1'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='litespeed-cache-css'
-        href='https://not4you.se/text/litespeed.css?ver=3.0.8.3'
-        type='text/css' media='all' />
-    <script type='text/javascript'
-        src='https://not4you.se/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-    <script type='text/javascript'
-        src='https://not4you.se/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-    <script type='text/javascript'
-        src='https://not4you.se/js/creativeily.js?ver=5.4.1'></script>
-    <script type='text/javascript'
-        src='https://not4you.se/js/accessibility.js?ver=5.4.1'></script>
-    <link rel='https://api.w.org/'
-        href='https://not4you.se/index.php?rest_route=/' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD"
-        href="https://not4you.se/xmlrpc.php?rsd" />
+
+    <link rel='stylesheet' id='fullscreenly-parent-style-css' href='https://not4you.se/text/style.css?ver=5.4.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='fullscreenly-google-fonts-css' href='//fonts.googleapis.com/css?family=Roboto%3A900&#038;display=swap&#038;ver=5.4.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='creativeily-google-fonts-css' href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C400i%2C700%2C700i%2C900&#038;ver=5.4.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='creativeily-style-css' href='https://not4you.se/text/style.css?ver=5.4.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='litespeed-cache-css' href='https://not4you.se/text/litespeed.css?ver=3.0.8.3' type='text/css' media='all' />
+    <script type='text/javascript' src='https://not4you.se/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+    <script type='text/javascript' src='https://not4you.se/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='https://not4you.se/js/creativeily.js?ver=5.4.1'></script>
+    <script type='text/javascript' src='https://not4you.se/js/accessibility.js?ver=5.4.1'></script>
+    <link rel='https://api.w.org/' href='https://not4you.se/index.php?rest_route=/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://not4you.se/xmlrpc.php?rsd" />
     <!--<link rel="wlwmanifest" type="application/wlwmanifest+xml"
         href="https://not4you.se/wp-includes/wlwmanifest.xml" />
     <meta name="generator" content="WordPress 5.4.1" />-->
@@ -396,10 +422,16 @@
             }
         }
     </style>
-</head>
-<body>
 
-<div id="page" class="site has-sidebar">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+</head>
+
+<<body class="bg-dark">
+
+    <div id="page" class="site has-sidebar">
 
 
         <div class="header">
@@ -418,28 +450,19 @@
                     </label>
                 </div>
                 <div class="header-menu">
-                    <nav id="nav" class="top-navigation" role="navigation"
-                        aria-label="Top Menu">
-                        <span id="creativeily-menu-back"><span
-                                class="dashicons dashicons-arrow-left-alt2"></span></span>
-                        <span id="creativeily-menu-home"><span
-                                class="dashicons dashicons-admin-home"></span></span>
+                    <nav id="nav" class="top-navigation" role="navigation" aria-label="Top Menu">
+                        <span id="creativeily-menu-back"><span class="dashicons dashicons-arrow-left-alt2"></span></span>
+                        <span id="creativeily-menu-home"><span class="dashicons dashicons-admin-home"></span></span>
 
                         <div id="top-menu" class="menu">
                             <ul id="menu-menu-1" class="">
-                                <li id="menu-item-18"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
-                                    <a href="http://not4you.se/"
-                                        aria-current="page">Home</a></li>
-                                <li id="menu-item-19"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
-                                    <a
-                                    href="https://not4you.se/getstudentinfo.php">Show
-                                    table</a></li>
-                                <li id="menu-item-24"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                    <a
-                                        href="https://not4you.se/login.php">LOGIN</a>
+                                <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
+                                    <a href="http://not4you.se/" aria-current="page">Home</a></li>
+                                <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+                                    <a href="https://not4you.se/getstudentinfo.php">Show
+                                        table</a></li>
+                                <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                                    <a href="https://not4you.se/login.php">LOGIN</a>
                                 </li>
                             </ul>
                         </div> <a href="#" id="accessibility-close-menu"></a>
@@ -451,58 +474,108 @@
 
 
 
-<form action="http://not4you.se/studentadded.php" method="post">
 
-<b>Add a New Student</b>
+            <div class="container">
+   <div class="card card-register mx-auto mt-5">
+     <div class="card-header">Register an Account</div>
+     <div class="card-body">
 
-<p>First Name:
-<input type="text" name="first_name" size="30" value="" />
-</p>
+       <form method="post" action="register.php">
 
-<p>Last Name:
-<input type="text" name="last_name" size="30" value="" />
-</p>
 
-<p>Email:
-<input type="text" name="email" size="30" value="" />
-</p>
+         
 
-<p>Street:
-<input type="text" name="street" size="30" value="" />
-</p>
+         <div class="form-group">
+           <div class="form-row">
+             <div class="col-md-12">
+               <label for="exampleInputName">Username</label>
+               <input class="form-control" id="exampleInputName" type="text"   name="username" value="<?php echo $username; ?>" >
+             </div>
+           </div>
+         </div>
+         <div class="form-group">
+           <label for="exampleInputEmail1">Email address</label>
+           <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" name="email" value="<?php echo $email; ?>" >
+         </div>
+         <div class="form-group">
+           <div class="form-row">
+             <div class="col-md-6">
+               <label for="exampleInputPassword1">Password</label>
+               <input class="form-control" id="exampleInputPassword1" type="password" name="password_1" >
+             </div>
+            <div class="col-md-6">
+               <label for="exampleInputPassword1">Confirm Password</label>
+               <input class="form-control" id="exampleInputPassword2" type="password" name="password_2" >
+             </div>
+           </div>
+         </div>
+          <button type="submit" class="btn btn-primary btn-block" name="reg_user">Register</button>
+       </form>
+       <div class="text-center">
+         <a class="d-block small mt-3" href="login.php">Login Page</a>
+       <!--- <a class="d-block small" href="forgot-password.html">Forgot Password?</a>-->
+       </div>
+     </div>
+   </div>
 
-<p>City:
-<input type="text" name="city" size="30" value="" />
-</p>
 
-<p>State (2 Characters):
-<input type="text" name="state" size="30" maxlength="2" value="" />
-</p>
 
-<p>Zip Code:
-<input type="text" name="zip" size="30" maxlength="5" value="" />
-</p>
 
-<p>Phone Number:
-<input type="text" name="phone" size="30" value="" />
-</p>
 
-<p>Birth Date (YYYY-MM-DD):
-<input type="text" name="birth_date" size="30" value="" />
-</p>
 
-<p>Sex (M or F):
-<input type="text" name="sex" size="30" maxlength="1" value="" />
-</p>
+            <form action="http://not4you.se/studentadded.php" method="post">
 
-<p>Lunch Cost:
-<input type="text" name="lunch" size="30" value="" />
-</p>
+                <b>Add a New Student</b>
 
-<p>
-<input type="submit" name="submit" value="Send" />
-</p>
+                <p>First Name:
+                    <input type="text" name="first_name" size="30" value="" />
+                </p>
 
-</form>
+                <p>Last Name:
+                    <input type="text" name="last_name" size="30" value="" />
+                </p>
+
+                <p>Email:
+                    <input type="text" name="email" size="30" value="" />
+                </p>
+
+                <p>Street:
+                    <input type="text" name="street" size="30" value="" />
+                </p>
+
+                <p>City:
+                    <input type="text" name="city" size="30" value="" />
+                </p>
+
+                <p>State (2 Characters):
+                    <input type="text" name="state" size="30" maxlength="2" value="" />
+                </p>
+
+                <p>Zip Code:
+                    <input type="text" name="zip" size="30" maxlength="5" value="" />
+                </p>
+
+                <p>Phone Number:
+                    <input type="text" name="phone" size="30" value="" />
+                </p>
+
+                <p>Birth Date (YYYY-MM-DD):
+                    <input type="text" name="birth_date" size="30" value="" />
+                </p>
+
+                <p>Sex (M or F):
+                    <input type="text" name="sex" size="30" maxlength="1" value="" />
+                </p>
+
+                <p>Lunch Cost:
+                    <input type="text" name="lunch" size="30" value="" />
+                </p>
+
+                <p>
+                    <input type="submit" name="submit" value="Send" />
+                </p>
+
+            </form>
 </body>
+
 </html>
