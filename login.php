@@ -523,7 +523,7 @@
 
 
 
-            <form action="http://not4you.se/studentadded.php" method="post">
+    <!--        <form action="http://not4you.se/studentadded.php" method="post">
 
                 <b>Add a New Student</b>
 
@@ -575,7 +575,9 @@
                     <input type="submit" name="submit" value="Send" />
                 </p>
 
-            </form>
+            </form>-->
+
+
 </body>
 
 </html>
