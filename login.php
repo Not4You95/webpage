@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <!--<form action="http://localhost/studentadded.php" method="post"> -->
+    <!--<form action="http://not4you.se/studentadded.php" method="post"> -->
 
     <b>Add a New Student</b>
 

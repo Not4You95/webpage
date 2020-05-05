@@ -8,7 +8,7 @@
 Command that gives the database user the least amount of power
 as is needed.
 GRANT INSERT, SELECT, DELETE, UPDATE ON test3.* 
-TO 'studentweb'@'localhost' 
+TO 'studentweb'@'not4you.se' 
 IDENTIFIED BY 'turtledove';
 SELECT : Select rows in tables
 INSERT : Insert new rows into tables
