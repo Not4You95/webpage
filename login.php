@@ -23,11 +23,12 @@
 
 <body>
 
-    <div class="topheader">
-        <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
-    </div>
+
 
     <div class="limiter">
+        <div class="topheader">
+            <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
+        </div>
         <div class="container-login100">
 
 
