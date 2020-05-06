@@ -14,35 +14,30 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="header">
+
+        <div class="header-menu">
+            <nav id="nav" class="top-navigation" role="navigation" aria-label="Top Menu">
+                <span id="creativeily-menu-back"><span class="dashicons dashicons-arrow-left-alt2"></span></span>
+                <span id="creativeily-menu-home"><span class="dashicons dashicons-admin-home"></span></span>
+
+                <div id="top-menu" class="menu">
+                    <ul id="menu-menu-1" class="">
+                        <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
+                            <a href="http://not4you.se/" aria-current="page">Home</a></li>
+                        <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+                            <a href="https://not4you.se/getstudentinfo.php">Show
+                                table</a></li>
+                        <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
+                            <a href="https://not4you.se/login.php">LOGIN</a>
+                        </li>
+                    </ul>
+                </div> <a href="#" id="accessibility-close-menu"></a>
+            </nav><!-- #site-navigation -->
+        </div>
 
 
-        <nav id="nav" class="top-navigation" role="navigation" aria-label="Top Menu">
-            <span id="creativeily-menu-back"><span class="dashicons dashicons-arrow-left-alt2"></span></span>
-            <span id="creativeily-menu-home"><span class="dashicons dashicons-admin-home"></span></span>
-
-            <div id="top-menu" class="menu">
-                <ul id="menu-menu-1" class="">
-                    <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-18">
-                        <a href="http://not4you.se/" aria-current="page">Home</a></li>
-                    <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
-                        <a href="https://not4you.se/getstudentinfo.php">Show
-                            table</a></li>
-                    <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                        <a href="https://not4you.se/login.php">LOGIN</a>
-                    </li>
-                </ul>
-            </div> <a href="#" id="accessibility-close-menu"></a>
-        </nav><!-- #site-navigation -->
-
-
-
-
-    </nav>
+    </div>
 
 
     <div class="container" id="start">
