@@ -154,6 +154,13 @@
   .topheader{
       text-align: center;
       background: transparent;
+      position: absolute;
+      overflow: visible;
+      left: 0;
+      top:0;
+      width: 100%;
+      z-index: 9;
+      padding-bottom: 20px;
   }
   
   .limiter {
