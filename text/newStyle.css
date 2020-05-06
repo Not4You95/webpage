@@ -150,6 +150,11 @@
   
   /*//////////////////////////////////////////////////////////////////
   [ login ]*/
+
+  .topheader{
+      text-align: center;
+      background: transparent;
+  }
   
   .limiter {
     width: 100%;
