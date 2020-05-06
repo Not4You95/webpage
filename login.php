@@ -10,6 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel='stylesheet' id='fullscreenly-parent-style-css' href='https://not4you.se/text/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css'
+        href='https://not4you.se/text/dashicons.min.css?ver=5.4.1'
+        type='text/css' media='all' />
 
     <style type="text/css">
         .image-header {
