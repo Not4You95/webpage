@@ -6,9 +6,9 @@
 
     <title>NOT4YOU &#8211; F#!& OFF</title>
     <link rel="stylesheet" id='boostramp' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel='stylesheet' id='fullscreenly-parent-style-css' href='https://not4you.se/text/style.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='fullscreenly-parent-style-css' href='https://not4you.se/text/newStyle.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='dashicons-css' href='https://not4you.se/text/dashicons.min.css?ver=5.4.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='fullscreenly-parent-style-css' href='text/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='fullscreenly-parent-style-css' href='text/newStyle.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css' href='text/dashicons.min.css?ver=5.4.1' type='text/css' media='all' />
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -29,6 +29,7 @@
         <div class="topheader">
             <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
         </div>
+        <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU---</a>
         <div class="container-login100">
 
 
