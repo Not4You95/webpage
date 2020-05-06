@@ -22,10 +22,7 @@
 
 <body>
 
- <!-- logo -->
-
- <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
-
+ 
  <div class="jumbotron text-center bg-dark" style="margin-bottom:0">
 
  <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a> 
