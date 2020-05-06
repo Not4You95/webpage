@@ -10,12 +10,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel='stylesheet' id='fullscreenly-parent-style-css' href='https://not4you.se/text/style.css' type='text/css' media='all' />
+
+    <style type="text/css">
+        .image-header {
+
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transform: translateZ(0) scale(1.0, 1.0);
+            transform: translateZ(0);
+            -ms-transform: translateZ(0);
+
+            background: ;
+
+            background-size: cover;
+            background-attachment: scroll;
+            -webkit-animation: grow 60s linear 10ms infinite;
+            animation: grow 60s linear 10ms infinite;
+
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            z-index: -2;
+            background: #222 url(https://not4you.se/img/header.jpeg ) center center no-repeat;
+        }
+    </style>
+
+
 </head>
 
 <body>
 
     <div class="header">
-
+        <div class="image-header"></div>
         <div class="header-menu">
             <nav id="nav" class="top-navigation" role="navigation" aria-label="Top Menu">
                 <span id="creativeily-menu-back"><span class="dashicons dashicons-arrow-left-alt2"></span></span>
