@@ -24,13 +24,9 @@
 <body>
 
 
-    <div class="jumbotron text-center bg-dark" style="margin-bottom:0">
-
-        <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
-    </div>
-
     <div class="limiter">
         <div class="container-login100">
+        <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
             <div class="wrap-login100">
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="images/img-01.png" alt="IMG">
