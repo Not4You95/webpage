@@ -151,6 +151,15 @@
   /*//////////////////////////////////////////////////////////////////
   [ login ]*/
 
+
+  .body{
+    width: 100%;
+    margin: 0 auto;  
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+  }
  
   .topheader{
       text-align: center;     

@@ -26,13 +26,7 @@
 
 
     <div class="limiter">
-        <div class="topheader">
-            <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU</a>
-        </div>
-        <a href="https://not4you.se/" rel="home" class="logo">NOT4YOU---</a>
-        <div class="container-login100">
-
-
+       
             <div class="wrap-login100">
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="images/img-01.png" alt="IMG">
