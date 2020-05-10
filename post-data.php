@@ -36,7 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check connection
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
-        } 
+        }
+        else{
+            echo "Coneection to database sucssed";
+        }
+       
         
         $sql = "INSERT INTO Sensor (value1, value2, value3)
         VALUES ('" . $value1 . "', '" . $value2 . "', '" . $value3 . "')";
