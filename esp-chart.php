@@ -1,166 +1,81 @@
-<!--
-  Rui Santos
-  Complete project details at https://RandomNerdTutorials.com
-  
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files.
-  
-  The above copyright notice and this permission notice shall be included in all
-  copies or substantial portions of the Software.
-
--->
-<?php
-
-$servername = "localhost";
-
-// REPLACE with your Database name
-$dbname = "u469899741_esp_data";
-// REPLACE with Database user
-$username = "u469899741_esp_board";
-// REPLACE with Database user password
-$password = "Grjw52E6%CYY";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "SELECT id, value1, value2, value3, reading_time FROM Sensor order by reading_time desc limit 40";
-
-$result = $conn->query($sql);
-
-while ($data = $result->fetch_assoc()){
-    $sensor_data[] = $data;
-}
-
-$readings_time = array_column($sensor_data, 'reading_time');
-
-// ******* Uncomment to convert readings time array to your timezone ********
-/*$i = 0;
-foreach ($readings_time as $reading){
-    // Uncomment to set timezone to - 1 hour (you can change 1 to any number)
-    $readings_time[$i] = date("Y-m-d H:i:s", strtotime("$reading - 1 hours"));
-    // Uncomment to set timezone to + 4 hours (you can change 4 to any number)
-    //$readings_time[$i] = date("Y-m-d H:i:s", strtotime("$reading + 4 hours"));
-    $i += 1;
-}*/
-
-$value1 = json_encode(array_reverse(array_column($sensor_data, 'value1')), JSON_NUMERIC_CHECK);
-$value2 = json_encode(array_reverse(array_column($sensor_data, 'value2')), JSON_NUMERIC_CHECK);
-$value3 = json_encode(array_reverse(array_column($sensor_data, 'value3')), JSON_NUMERIC_CHECK);
-$reading_time = json_encode(array_reverse($readings_time), JSON_NUMERIC_CHECK);
-
-/*echo $value1;
-echo $value2;
-echo $value3;
-echo $reading_time;*/
-
-$result->free();
-$conn->close();
-?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <style>
-    body {
-      min-width: 310px;
-    	max-width: 1280px;
-    	height: 500px;
-      margin: 0 auto;
-    }
-    h2 {
-      font-family: Arial;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-  </style>
-  <body>
-    <h2>ESP Weather Station</h2>
-    <div id="chart-temperature" class="container"></div>
-    <div id="chart-humidity" class="container"></div>
-    <div id="chart-pressure" class="container"></div>
+<head>
+    <meta http-equiv="refresh" content="60">
+    <title>Temp/Humidity</title>
+    <script src="Chart.bundle.min.js"></script>
+   
+</head>
+<body>
+
+<form method=""GET" action="chart.php">
+Start: <input type="datetime-local" name="begindate" id="begindate" />
+End: <input type="datetime-local" name="enddate" id="enddate" />
+<input type="submit" />
+</form>
+
+
+<br/>
+<<anvas id="temperature" style="width:100%; height:400px;">
 <script>
+    var ctx = document.getElementById("temperature");
+    var config = {
+        type: 'line',
 
-var value1 = <?php echo $value1; ?>;
-var value2 = <?php echo $value2; ?>;
-var value3 = <?php echo $value3; ?>;
-var reading_time = <?php echo $reading_time; ?>;
+        data: {
+            labels:,
+            datasets:[{
+                label:'Temperature',
+                fill:false,
+                borderColor:'rgba(154,21,7,1)',
+                data:,
 
-var chartT = new Highcharts.Chart({
-  chart:{ renderTo : 'chart-temperature' },
-  title: { text: 'BME280 Temperature' },
-  series: [{
-    showInLegend: false,
-    data: value1
-  }],
-  plotOptions: {
-    line: { animation: false,
-      dataLabels: { enabled: true }
-    },
-    series: { color: '#059e8a' }
-  },
-  xAxis: { 
-    type: 'datetime',
-    categories: reading_time
-  },
-  yAxis: {
-    title: { text: 'Temperature (Celsius)' }
-    //title: { text: 'Temperature (Fahrenheit)' }
-  },
-  credits: { enabled: false }
-});
-
-var chartH = new Highcharts.Chart({
-  chart:{ renderTo:'chart-humidity' },
-  title: { text: 'BME280 Humidity' },
-  series: [{
-    showInLegend: false,
-    data: value2
-  }],
-  plotOptions: {
-    line: { animation: false,
-      dataLabels: { enabled: true }
-    }
-  },
-  xAxis: {
-    type: 'datetime',
-    //dateTimeLabelFormats: { second: '%H:%M:%S' },
-    categories: reading_time
-  },
-  yAxis: {
-    title: { text: 'Humidity (%)' }
-  },
-  credits: { enabled: false }
-});
+            }]
+        },
+        options: {
+            responsive:false,
+            title:{
+                display:true,
+                text:'Temperature',
+            },
+            scales: {
+                xAxes: [{
+                    display:true,
+                }]
+            }
+        }
+    };
 
 
-var chartP = new Highcharts.Chart({
-  chart:{ renderTo:'chart-pressure' },
-  title: { text: 'BME280 Pressure' },
-  series: [{
-    showInLegend: false,
-    data: value3
-  }],
-  plotOptions: {
-    line: { animation: false,
-      dataLabels: { enabled: true }
-    },
-    series: { color: '#18009c' }
-  },
-  xAxis: {
-    type: 'datetime',
-    categories: reading_time
-  },
-  yAxis: {
-    title: { text: 'Pressure (hPa)' }
-  },
-  credits: { enabled: false }
-});
-
+        window.temperatureChart = new Chart(ctx, config);
 </script>
+<canvas id="humidity" style="width:100%; height:400px;"></canvas>
+<script>
+    var ctx = document.getElementById("humidity");
+    var config = {
+        type: 'line',
+        data: {
+            labels:,
+            datasets:[{
+                label:'Humidity',
+                fill:false,
+                borderColor:'rgba(7,42,154,1)',
+                data:,
+
+            }]
+        },
+        options: {
+            responsive:false,
+            title:{
+                display:true,
+                text:'Humidity',
+            }
+        }
+    };
+
+
+    window.humidityChart = new Chart(ctx, config);
+</script>
+
 </body>
 </html>
