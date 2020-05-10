@@ -48,6 +48,7 @@ $api_key = $value1 = $value2 = $value3 = "";
         }
     
         $conn->close();*/
+        echo "Deta input";
         echo $value1;
         echo $value2;
         echo $value3;
