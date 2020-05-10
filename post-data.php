@@ -19,7 +19,7 @@ $api_key_value = "tPmAT5Ab3j7F9";
 
 $api_key = $value1 = $value2 = $value3 = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //$api_key = test_input($_POST["api_key"]);
    // if ($api_key == $api_key_value) {
         $value1 = test_input($_POST["value1"]);
@@ -90,9 +90,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_close($dbc);
         }
     
-} else {
+/*} else {
     echo "No data posted with HTTP POST.";
-}
+}*/
 
 function test_input($data)
 {
