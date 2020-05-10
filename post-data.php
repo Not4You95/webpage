@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $value3;
         echo "\n";
 
-        $query = "INSERT INTO SensorData (id,	sensor,	location,	value1	value2,	value3,	reading_time) VALUES (NULL,NULL,NULL,NULL,NULL,NULL,NULL)";
+        $query = "INSERT INTO Sensor (id, value1	,value2,	value3,	reading_time) VALUES (NULL,NULL,NULL,NULL,NULL)";
 
         $stmt = mysqli_prepare($dbc, $query);
 
