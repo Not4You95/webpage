@@ -28,7 +28,7 @@ $light=mysqli_real_escape_string($conn,$_POST['light']);
 }
 $logdate= date("Y-m-d H:i:s");
 
-$insertSQL="INSERT into ".TB_ENV." (logdate,value1,value2,pressure,light) values ('".$logdate."',".$value1.",".$value2.",".$pressure.",".$light.")";
+$insertSQL="INSERT into ".TB_ENV." (logdate,value1,value2,pressure,light) values ('".$logdate."',".$value1.",".$value2)";
 mysqli_query($conn,$insertSQL) or die("INSERT Query has Failed - ".$insertSQL );
 
 ?>
