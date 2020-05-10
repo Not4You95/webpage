@@ -10,7 +10,7 @@
   copies or substantial portions of the Software.
 */
 
-include('config.php');
+include('../config/config.php');
 $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
     mysqli_connect_error());
 
