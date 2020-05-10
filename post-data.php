@@ -48,6 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     
         $conn->close();*/
+
+
+
+
         echo "Deta input";
         echo $value1;
         echo $value2;
@@ -94,6 +98,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             mysqli_close($dbc);
         }
+
+
+        $sql = "INSERT INTO Sensor (value1, value2, value3)
+        VALUES ('" . $value1 . "', '" . $value2 . "', '" . $value3 . "')";
+        
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+        } 
+        else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    
+        $conn->close();
+    }
+    else {
+        echo "Wrong API Key provided.";
+    }
     
 } else {
     echo "No data posted with HTTP POST.";
