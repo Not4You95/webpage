@@ -111,10 +111,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     
         $conn->close();
-    }
+    /*}
     else {
         echo "Wrong API Key provided.";
-    }
+    }*/
     
 } else {
     echo "No data posted with HTTP POST.";
