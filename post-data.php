@@ -48,6 +48,9 @@ $api_key = $value1 = $value2 = $value3 = "";
         }
     
         $conn->close();*/
+        echo $value1;
+        echo $value2;
+        echo $value3;
 
         $query = "INSERT INTO SensorData (id,	sensor,	location,	value1	value2,	value3,	reading_time) VALUES (NULL,NULL,NULL,NULL,NULL,NULL,NULL)";
 
