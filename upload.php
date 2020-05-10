@@ -1,20 +1,20 @@
 <?php
 include('config.php');
 $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD,DB_NAME) or die("Unable to connect to MySQL");
-//0: temperature
-//1: humidity
+//0: value1
+//1: value2
 //2: pressure
 //3: light
 
-if (mysqli_real_escape_string($conn,$_POST['temperature']) ==NULL ||mysqli_real_escape_string($conn,$_POST['temperature']) ==NAN){
-$temperature="NULL";
+if (mysqli_real_escape_string($conn,$_POST['value1']) ==NULL ||mysqli_real_escape_string($conn,$_POST['value1']) ==NAN){
+$value1="NULL";
 }else{
-$temperature=mysqli_real_escape_string($conn,$_POST['temperature']);
+$value1=mysqli_real_escape_string($conn,$_POST['value1']);
 }
-if (mysqli_real_escape_string($conn,$_POST['humidity']) ==NULL){
-$humidity="NULL";
+if (mysqli_real_escape_string($conn,$_POST['value2']) ==NULL){
+$value2="NULL";
 }else{
-$humidity=mysqli_real_escape_string($conn,$_POST['humidity']);
+$value2=mysqli_real_escape_string($conn,$_POST['value2']);
 }
 if (mysqli_real_escape_string($conn,$_POST['pressure']) ==NULL){
 $pressure="NULL";
@@ -28,7 +28,7 @@ $light=mysqli_real_escape_string($conn,$_POST['light']);
 }
 $logdate= date("Y-m-d H:i:s");
 
-$insertSQL="INSERT into ".TB_ENV." (logdate,temperature,humidity,pressure,light) values ('".$logdate."',".$temperature.",".$humidity.",".$pressure.",".$light.")";
+$insertSQL="INSERT into ".TB_ENV." (logdate,value1,value2,pressure,light) values ('".$logdate."',".$value1.",".$value2.",".$pressure.",".$light.")";
 mysqli_query($conn,$insertSQL) or die("INSERT Query has Failed - ".$insertSQL );
 
 ?>
