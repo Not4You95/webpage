@@ -25,9 +25,9 @@ echo'';
 echo 'Database \n';
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-echo;
+echo'';
 echo $_POST['username'];
-echo;
+echo'';
 echo $_POST['password'];
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
     echo '.';
