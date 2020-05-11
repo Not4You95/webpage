@@ -1,11 +1,12 @@
 <?php
+
 include('../config/config.php');
 //session_start();
 
 
 echo 'Hello world!/>';
 
-if(isset($_POST['submit'])){
+if(isset($_POST['Login'])){
 
     echo 'submit/>';
     if(empty($_POST['username'])){
