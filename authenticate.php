@@ -4,8 +4,9 @@ include('../config/config.php');
 //session_start();
 
 
-echo "Hello world!";
+echo "Hello world!<br />";
 echo $_POST;
+echo "<br />";
 foreach ($_POST as $missing) {
 
     echo "$missing<br />";
