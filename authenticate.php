@@ -5,7 +5,7 @@ include('../config/config.php');
 
 echo 'Hello world!';
 
-if(isset($_POST['submit']){
+if(isset($_POST['submit'])){
 
     if(empty($_POST['username'])){
         exit('Please fill the username field!');
