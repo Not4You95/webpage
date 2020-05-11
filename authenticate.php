@@ -1,11 +1,6 @@
 <?php
 include('../config/config.php');
 session_start();
-// Change this to your connection info.
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'phplogin';
 // Try and connect using the info above.
 $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
     mysqli_connect_error());
