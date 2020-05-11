@@ -12,9 +12,9 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 }
 
 echo 'Post \n';
-echo'';
+printf("\n");
 echo $_POST['username'];
-echo'';
+printf("\n");
 echo $_POST['password'];
 
 // Try and connect using the info above.
