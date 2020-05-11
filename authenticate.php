@@ -11,7 +11,7 @@ foreach ($_POST as $missing) {
 
     echo "$missing<br />";
 }
-if(isset($_POST['submit'])){
+if(isset($_POST['username'], $_POST['password'])){
 
     echo "submit";
     if(empty($_POST['username'])){
