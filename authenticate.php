@@ -1,6 +1,6 @@
 <?php
 include('../config/config.php');
-//session_start();
+session_start();
 
 
 
@@ -34,7 +34,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            echo 'Welcome ' . $_SESSION['name'] . '!';
+            header('Location: home.php');
         } else {
             echo 'Incorrect password!';
         }
