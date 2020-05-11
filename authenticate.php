@@ -12,6 +12,8 @@ if (!isset($_POST['username'], $_POST['password'])) {
 }
 
 echo 'Post \n';
+echo $_POST['username'];
+echo $_POST['password'];
 
 // Try and connect using the info above.
 $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
