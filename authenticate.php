@@ -6,6 +6,10 @@ include('../config/config.php');
 
 echo "Hello world!";
 echo $_POST;
+foreach ($_POST as $missing) {
+
+    echo "$missing<br />";
+}
 if(isset($_POST['submit'])){
 
     echo "submit";
