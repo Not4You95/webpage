@@ -1,16 +1,21 @@
 <?php
 include('../config/config.php');
-session_start();
+//session_start();
 
 
 echo 'Hello world!';
 
 if(isset($_POST['submit']){
 
-    if ( !isset($_POST['username'], $_POST['password']) ) {
-        // Could not get the data that should have been sent.
-        exit('Please fill both the username and password fields!');
+    if(empty($_POST['username'])){
+        exit('Please fill the username field!');
     }
+
+    if(empty($_POST['username'])){
+        exit('Please fill and password field!');
+    }
+
+    
 
 
 }
