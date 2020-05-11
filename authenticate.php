@@ -29,8 +29,7 @@ echo'';
 echo $_POST['username'];
 echo'';
 echo $_POST['password'];
-printf("\n");
-printf("\n");
+
 echo 'If: ';
 
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
