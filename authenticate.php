@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
         exit('Please fill and password field!');
     }
 
-    $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
+    $conn = mysqli_connect($DB_SERVER, $DB_USER, $DB_PASSWORD, $DB_NAME) or die('Could not connect to MySQL: ' .
     mysqli_connect_error());
 
     if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
@@ -35,6 +35,8 @@ if(isset($_POST['submit'])){
     echo 'The end!';
 
 
+}else{
+    echo "No post!";
 }
 
 
