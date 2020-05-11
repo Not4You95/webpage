@@ -11,7 +11,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 	exit('Please fill both the username and password fields!');
 }
 
-echo 'Post \n';
+echo 'Post: ';
 printf("\n");
 echo $_POST['username'];
 printf("\n");
@@ -29,6 +29,9 @@ echo'';
 echo $_POST['username'];
 echo'';
 echo $_POST['password'];
+printf("\n");
+printf("\n");
+echo 'If: '
 
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
     echo '-----------------------';
