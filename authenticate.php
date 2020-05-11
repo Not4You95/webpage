@@ -37,6 +37,8 @@ if(isset($_POST['username'], $_POST['password'])){
     
     
         $stmt->close();
+    }else{
+        echo "no prep <br />";
     }
 
 
