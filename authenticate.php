@@ -6,9 +6,9 @@ session_start();
 echo 'Hello world!';
 
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
-if (!isset($_POST['username'], $_POST['password'])) {
-    // Could not get the data that should have been sent.
-    exit('Please fill both the username and password fields!');
+if ( !isset($_POST['username'], $_POST['password']) ) {
+	// Could not get the data that should have been sent.
+	exit('Please fill both the username and password fields!');
 }
 
 echo 'Post \n';
@@ -50,6 +50,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
 echo '';
 echo 'The End!';
+
 
 
 ?>
