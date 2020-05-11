@@ -3,10 +3,11 @@ include('../config/config.php');
 //session_start();
 
 
-echo 'Hello world!';
+echo 'Hello world!/>';
 
 if(isset($_POST['submit'])){
 
+    echo 'submit/>';
     if(empty($_POST['username'])){
         exit('Please fill the username field!');
     }
