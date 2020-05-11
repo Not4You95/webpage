@@ -11,11 +11,13 @@ if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please fill both the username and password fields!');
 }
 
+echo 'Post';
 
 // Try and connect using the info above.
 $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
     mysqli_connect_error());
 
+    echo 'Database';
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
@@ -46,6 +48,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
     $stmt->close();
 }
+
+echo 'The End!';
 
 
 ?>
