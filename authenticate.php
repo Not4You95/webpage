@@ -13,7 +13,7 @@ foreach ($_POST as $missing) {
 }
 if(isset($_POST['username'], $_POST['password'])){
 
-    echo "submit";
+    echo "submit<br />";
     if(empty($_POST['username'])){
         exit('Please fill the username field!');
     }
@@ -25,7 +25,10 @@ if(isset($_POST['username'], $_POST['password'])){
     $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
     mysqli_connect_error());
 
+    echo "database <br />";
     if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+        
+        echo "------<br />";
         // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
@@ -37,11 +40,11 @@ if(isset($_POST['username'], $_POST['password'])){
     }
 
 
-    echo 'The end!';
+    echo 'The end!<br />';
 
 
 }else{
-    echo "No post!";
+    echo "No post!<br />";
 }
 
 
