@@ -5,7 +5,7 @@ include('../config/config.php');
 
 
 echo "Hello world!";
-
+echo $_POST;
 if(isset($_POST['submit'])){
 
     echo "submit";
