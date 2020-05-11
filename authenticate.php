@@ -4,16 +4,16 @@ include('../config/config.php');
 //session_start();
 
 
-echo 'Hello world!/>';
+echo "Hello world!";
 
-if(isset($_POST['Login'])){
+if(isset($_POST['submit'])){
 
-    echo 'submit/>';
+    echo "submit";
     if(empty($_POST['username'])){
         exit('Please fill the username field!');
     }
 
-    if(empty($_POST['username'])){
+    if(empty($_POST['password'])){
         exit('Please fill and password field!');
     }
 
