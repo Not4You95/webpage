@@ -6,7 +6,7 @@ echo "Hello world!<br />";
 
 
 // File upload path
-$targetDir = "https://not4you.se/uploads/";
+$targetDir = "uploads/";
 $fileName = basename($_FILES["file"]["name"]);
 $statusMsg = '';
 $targetFilePath = $targetDir . $fileName;
