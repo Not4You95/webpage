@@ -23,6 +23,8 @@ $username_err = $password_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    echo "Post !<br />";
+
     if (empty(trim( $_POST["username"]  ))) {
         $username_err = "Please enter username";
     }else {
@@ -36,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($username_err) && empty($password_err)) {
+        echo "No empty user or pass!<br />";
 
         $sql = 'SELECT id, password FROM accounts WHERE username = ?';
 
@@ -66,10 +69,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     }else{
                         $password_err = "The password you entered was not valid.";
+                        echo $password_err;
                     }
                 }
             }else{
                 $username_err = "No account found with that username.";
+                echo $username_err;
             }
 
         }else{
