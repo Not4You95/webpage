@@ -1,116 +1,86 @@
 <?php
 
-include('../config/config.php');
+
 session_start();
 
 
 echo "Hello world!<br />";
 echo $_POST;
 echo "<br />";
-foreach ($_POST as $missing) {
 
-    echo "$missing<br />";
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: home.php");
+    exit;
 }
-if (isset($_POST['username'], $_POST['password'])) {
 
-    echo "submit<br />";
-    if (empty($_POST['username'])) {
-        exit('Please fill the username field!');
+require_once "../config/config.php";
+
+$username = $password = "";
+$username_err = $password_err = "";
+
+
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty(trim( $_POST["username"]  ))) {
+        $username_err = "Please enter username";
+    }else {
+        $username = trim($_POST["username"]);
     }
 
-    if (empty($_POST['password'])) {
-        exit('Please fill and password field!');
+    if (empty(trim( $_POST["password"]  ))) {
+        $password_err = "Please enter password";
+    }else {
+        $password = trim($_POST["password"]);
     }
 
-    $conn = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME) or die('Could not connect to MySQL: ' .
-        mysqli_connect_error());
+    if (empty($username_err) && empty($password_err)) {
 
-    echo "database <br />";
+        $sql = 'SELECT id, password FROM accounts WHERE username = ?';
 
-
-    $query = 'SELECT id, password FROM accounts WHERE username = ?';
-
-    $stmt = mysqli_prepare($dbc, $query);
-
-    mysqli_stmt_bind_param($stmt, "s", $_POST['username']);
-    mysqli_stmt_execute($stmt);
-    $stmt->store_result();
-
-    $affected_rows = mysqli_stmt_affected_rows($stmt);
-
-    if ($stmt->num_rows > 0) {
-
-        echo 'Pass';
-
-        $stmt->bind_result($id, $password);
-        $stmt->fetch();
-
-        // Account exists, now we verify the password.
-        // Note: remember to use password_hash in your registration file to store the hashed passwords.
-        if (password_verify($_POST['password'], $password)) {
-            // Verification success! User has loggedin!
-            // Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
-            session_regenerate_id();
-            $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['username'];
-            $_SESSION['id'] = $id;
-            echo 'Welcome ' . $_SESSION['name'] . '!';
-        } else {
-            echo 'Incorrect password!';
+        if ($stmt = mysqli_prepare($link,$sql) ) {
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
         }
-    } else {
 
-        echo 'Wrong username <br />';
-        echo $username;
-        echo '<br />';
-        echo $_POST['username'];
-        echo '<br />';
+        $param_username = $username;
+
+        if(mysqli_stmt_execute($stmt)){
+            mysqli_stmt_store_result($stmt);
+
+            if(mysqli_stmt_num_rows($stmt) == 1){
+
+                mysqli_stmt_bind_result($stmt, $id,$username,$hashed_password,$email);
+
+                if (mysqli_stmt_fetch($stmt)) {
+                    if (password_verify($password,$hashed_password)) {
+                        session_start();
+
+                        // Store data in session variables
+                        $_SESSION["loggedin"] = true;
+                        $_SESSION["id"] = $id;
+                        $_SESSION["username"] = $username;     
+                        
+                        // Redirect user to welcome page
+                        header("location: home.php");
+
+                    }else{
+                        $password_err = "The password you entered was not valid.";
+                    }
+                }
+            }else{
+                $username_err = "No account found with that username.";
+            }
+
+        }else{
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+
+        mysqli_stmt_close($stmt);
     }
-
-    mysqli_stmt_close($stmt);
-
-    mysqli_close($dbc);
-    /*if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
-        
-        echo "------<br />";
-        // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
-        $stmt->bind_param('s', $_POST['username']);
-        $stmt->execute();
-        // Store the result so we can check if the account exists in the database.
-        $stmt->store_result();
-
-        if ($stmt->num_rows > 0) {
-	$stmt->bind_result($id, $password);
-	$stmt->fetch();
-	// Account exists, now we verify the password.
-	// Note: remember to use password_hash in your registration file to store the hashed passwords.
-	if (password_verify($_POST['password'], $password)) {
-		// Verification success! User has loggedin!
-		// Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
-		session_regenerate_id();
-		$_SESSION['loggedin'] = TRUE;
-		$_SESSION['name'] = $_POST['username'];
-		$_SESSION['id'] = $id;
-		echo 'Welcome ' . $_SESSION['name'] . '!';
-	} else {
-		echo 'Incorrect password!';
-	}
-} else {
-	echo 'Incorrect username!';
+    // Close connection
+    mysqli_close($link);
 }
-    
-    
-        $stmt->close();
-    }else{
-        echo "no prep <br />";
-    }*/
 
-
-
-
-    echo 'The end!<br />';
-} else {
-    echo "No post!<br />";
-}
 
 ?>
