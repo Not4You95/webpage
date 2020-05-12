@@ -34,7 +34,7 @@ $stmt->close();
 			<div>
 				<h1>Website Title</h1>
 				<a href="https://not4you.se/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-				<a href="https://not4you.se/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
 		</nav>
 		<div class="content">
@@ -55,7 +55,7 @@ $stmt->close();
 						<td><?=$email?></td>
 					</tr>
 					<tr>
-					<p>Creat an account for some one <a href="register.php">Sign up now</a>.</p>
+					<p>Creat an account for some one <a href="https://not4you.se/register.php">Sign up now</a>.</p>
 					</tr>
 				</table>
 			</div>

@@ -6,7 +6,7 @@ require_once "../config/config.php";
 $statusMsg = '';
 
 // File upload path
-$targetDir = "uploads/";
+$targetDir = "https://not4you.se/uploads/";
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
@@ -38,18 +38,3 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 echo $statusMsg;
 ?>
 
-
-
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<form action="upload.php" method="post" enctype="multipart/form-data">
-  Select image to upload:
-  <input type="file" name="fileToUpload" id="fileToUpload">
-  <input type="submit" value="Upload Image" name="submit">
-</form>
-
-</body>
-</html>
