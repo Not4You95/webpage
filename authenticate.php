@@ -34,7 +34,7 @@ if (isset($_POST['username'], $_POST['password'])) {
 
     mysqli_stmt_bind_param($stmt, "s", $_POST['username']);
     mysqli_stmt_execute($stmt);
-    $stmt->store_result();
+    //$stmt->store_result();
 
     $affected_rows = mysqli_stmt_affected_rows($stmt);
 
