@@ -54,6 +54,9 @@ $stmt->close();
 						<td>Email:</td>
 						<td><?=$email?></td>
 					</tr>
+					<tr>
+					<p>Creat an account for some one <a href="register.php">Sign up now</a>.</p>
+					</tr>
 				</table>
 			</div>
 		</div>
