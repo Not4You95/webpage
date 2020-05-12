@@ -1,18 +1,20 @@
-
-
 <<?php
 // Include the database configuration file
 require_once "../config/config.php";
-$statusMsg = '';
+echo "Hello world!<br />";
+
+
 
 // File upload path
 $targetDir = "https://not4you.se/uploads/";
 $fileName = basename($_FILES["file"]["name"]);
+$statusMsg = '';
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     // Allow certain file formats
+    echo "Submit!<br />";
     $allowTypes = array('.bin');
     if(in_array($fileType, $allowTypes)){
         // Upload file to server
