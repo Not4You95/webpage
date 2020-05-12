@@ -38,7 +38,7 @@ if (isset($_POST['username'], $_POST['password'])) {
 
     $affected_rows = mysqli_stmt_affected_rows($stmt);
 
-    if ($affected_rows == 1) {
+    if ($stmt->num_rows > 0) {
 
         echo 'Pass';
 
