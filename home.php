@@ -28,6 +28,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
+			<p>Upload file<a href="https://not4you.se/upload.php">Sign up now</a>.</p>
 		</div>
 	</body>
 </html>
