@@ -36,7 +36,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<div>
 		<form action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
 			Select image to upload:
-			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="file" name="file" id="file">
 			<input type="submit" value="Upload Image" name="submit">
 		</form>
 	</div>
