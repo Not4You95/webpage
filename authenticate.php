@@ -61,6 +61,9 @@ if (isset($_POST['username'], $_POST['password'])) {
     } else {
 
         echo 'Wrong username <br />';
+        echo $username;
+        echo '<br />';
+        echo $_POST['username'];
     }
 
     mysqli_stmt_close($stmt);
