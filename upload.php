@@ -20,7 +20,7 @@ echo "<br />";
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     // Allow certain file formats
     echo "Submit!<br />";
-    $allowTypes = array('.bin','.ino','.esp32');
+    $allowTypes = array('.bin','.ino','.esp32' , '.ino.esp32.bin');
     if(in_array($fileType, $allowTypes)){
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
