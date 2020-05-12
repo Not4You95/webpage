@@ -12,6 +12,10 @@ $statusMsg = '';
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
+echo $_POST["submit"];
+echo "<br />";
+echo $_FILES["file"]["name"];
+echo "<br />";
 if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
     // Allow certain file formats
     echo "Submit!<br />";
