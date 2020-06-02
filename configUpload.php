@@ -238,7 +238,7 @@ if (!isset($_SESSION['loggedin'])) {
                                                 Select file:
                                                 
                                                 <input type="file" name="file" id="file">
-                                                <input class="btn btn-success mr-2"> type="submit" value="Upload Image" name="submit">
+                                                <input class="btn btn-success mr-2" type="submit" value="Upload Image" name="submit">
                                             </form>
                                         </div>
                                     </div>
