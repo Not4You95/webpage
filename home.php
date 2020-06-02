@@ -16,7 +16,7 @@ if (!isset($_SESSION['loggedin'])) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin Premium Bootstrap Admin Dashboard Template</title>
+    <title>Not4You admin page</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../../assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../../assets/vendors/iconfonts/ionicons/css/ionicons.css">
@@ -52,7 +52,7 @@ if (!isset($_SESSION['loggedin'])) {
               <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                 <div class="d-inline-flex mr-0 mr-md-3">
                   <div class="flag-icon-holder">
-                    <i class="flag-icon flag-icon-us"></i>
+                    <i class="flag-icon flag-icon-se"></i>
                   </div>
                 </div>
                 <span class="profile-text font-weight-medium d-none d-md-block">English</span>
@@ -288,9 +288,7 @@ if (!isset($_SESSION['loggedin'])) {
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
             <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="http://www.not4you.se/" target="_blank">Not4you</a>. All rights reserved.</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i>
-              </span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="http://www.not4you.se/" target="_blank">Not4you</a>. All rights reserved.</span>              
             </div>
           </footer>
           <!-- partial -->
