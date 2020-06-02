@@ -231,23 +231,26 @@ if (!isset($_SESSION['loggedin'])) {
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">Default form</h4>
-                                            <p class="card-description"> Basic form layout </p>                                            
+                                            <p class="card-description"> Basic form layout </p>
+                                            
 
                                             <form class="forms-sample" action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
                                                 Select file:
                                                 
                                                 <input type="file" name="file" id="file">
-                                                <input type="submit" value="Upload Image" name="submit">
+                                                <input class="btn btn-success mr-2"> type="submit" value="Upload Image" name="submit">
                                             </form>
                                         </div>
                                     </div>
                                 </div>
 
-                                
+
+
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
+                
 
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
