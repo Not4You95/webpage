@@ -47,7 +47,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <img src="../../../assets/images/logo-mini.svg" alt="logo" /> </a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center">
-                <ul class="navbar-nav">                    
+                <ul class="navbar-nav">
                     <li class="nav-item dropdown language-dropdown">
                         <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                             <div class="d-inline-flex mr-0 mr-md-3">
@@ -63,7 +63,7 @@ if (!isset($_SESSION['loggedin'])) {
                                     <i class="flag-icon flag-icon-us"></i>
                                 </div>English
                             </a>
-                            
+
                         </div>
                     </li>
                 </ul>
@@ -217,11 +217,22 @@ if (!isset($_SESSION['loggedin'])) {
                                         <div class="card-body">
                                             <h4 class="card-title">Default form</h4>
                                             <p class="card-description"> Basic form layout </p>
-                                            
+
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Country</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control">
+                                                        <option>America</option>
+                                                        <option>Italy</option>
+                                                        <option>Russia</option>
+                                                        <option>Britain</option>
+                                                    </select>
+                                                </div>
+                                            </div>
 
                                             <form class="forms-sample" action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
                                                 Select file:
-                                                
+
                                                 <input type="file" name="file" id="file">
                                                 <input class="btn btn-success mr-2" type="submit" value="Upload Image" name="submit">
                                             </form>
@@ -235,7 +246,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </div>
                     </div>
                 </div>
-                
+
 
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
