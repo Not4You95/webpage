@@ -18,8 +18,23 @@ $api_key_value = "tPmAT5Ab3j7F9";
 
 $api_key = $value1 = $value2 = $value3 = "";
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $api_key = test_input($_POST["api_key"]);
+    $mac = test_input($_POST["SensorId"]);
+
+    $sql = "SELECT id, username, password, email FROM accounts WHERE username = ?";
+
+        if ($stmt = mysqli_prepare($link,$sql) ) {
+            mysqli_stmt_bind_param($stmt, "s", $param_username);
+        }
+
+
+}
+
+
+/*
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $api_key = test_input($_POST["SensorId"]);
     if ($api_key == $api_key_value) {
         $value1 = test_input($_POST["value1"]);
         $value2 = test_input($_POST["value2"]);
@@ -45,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "No data posted with HTTP POST.";
     echo $_SERVER["REQUEST_METHOD"];
-}
+}*/
 
 function test_input($data)
 {

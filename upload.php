@@ -41,8 +41,9 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 }else{
     $statusMsg = 'Please select a file to upload.';
 }
-
+mysqli_close($link);
 // Display status message
 echo $statusMsg;
+header("location: home.php");
 ?>
 

@@ -52,12 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if(mysqli_stmt_num_rows($stmt) == 1){
 
                 mysqli_stmt_bind_result($stmt, $id,$username,$hashed_password,$email);
-                
-                echo "hased <br />";
-                echo $hashed_password;
-                echo "<br />";
-                echo $password;
-                echo "<br />";
+                                
 
                 if (mysqli_stmt_fetch($stmt)) {
                     if (password_verify($password,$hashed_password)) {

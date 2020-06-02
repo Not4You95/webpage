@@ -25,6 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<h1>Website Title</h1>
 			<a href="https://not4you.se/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 			<a href="https://not4you.se/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			<a href="https://not4you.se/blank-page.html"><i class="fas-fa-sign-out-alt"> </i>Test</a>
 		</div>
 	</nav>
 	<div class="content">
@@ -40,6 +41,8 @@ if (!isset($_SESSION['loggedin'])) {
 			<input type="submit" value="Upload Image" name="submit">
 		</form>
 	</div>
+
+	
 </body>
 
 </html>
