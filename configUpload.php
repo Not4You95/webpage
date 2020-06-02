@@ -231,19 +231,7 @@ if (!isset($_SESSION['loggedin'])) {
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">Default form</h4>
-                                            <p class="card-description"> Basic form layout </p>
-                                            <form class="forms-sample">
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Email address</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="exampleInputPassword1">Password</label>
-                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                                </div>
-                                                <button type="submit" class="btn btn-success mr-2">Submit</button>
-                                                <button class="btn btn-light">Cancel</button>
-                                            </form>
+                                            <p class="card-description"> Basic form layout </p>                                            
 
                                             <form class="forms-sample" action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
                                                 Select file:
@@ -255,18 +243,11 @@ if (!isset($_SESSION['loggedin'])) {
                                     </div>
                                 </div>
 
-
-
+                                
                             </div>
                         </div>
                     </div>
-
-                </div>
-                <form action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="file" id="file">
-                    <input type="submit" value="Upload Image" name="submit">
-                </form>
+                </div>                
 
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
