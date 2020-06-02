@@ -215,8 +215,8 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Default form</h4>
-                                            <p class="card-description"> Basic form layout </p>
+                                            <h4 class="card-title">Upload Code to ESP32</h4>
+                                            <p class="card-description"></p>
 
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Country</label>
@@ -233,7 +233,7 @@ if (!isset($_SESSION['loggedin'])) {
                                             <form class="forms-sample" action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
                                                 Select file:
 
-                                                <input class="btn btn-success mr-2" type="file" name="file" id="file">
+                                                <input  type="file" name="file" id="file">
                                                 <input class="btn btn-success mr-2" type="submit" value="Upload Image" name="submit">
                                             </form>
                                         </div>
