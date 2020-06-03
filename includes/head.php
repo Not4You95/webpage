@@ -26,8 +26,9 @@ if (!isset($_SESSION['loggedin'])) {
     <link rel="stylesheet" href="../../../assets/vendors/iconfonts/typicons/src/font/typicons.css">
     <link rel="stylesheet" href="../../../assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
 
-    <!-- endinject -->
+ <!-- endinject -->
     <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../../assets/vendors/icheck/skins/all.css">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="../../../assets/css/shared/style.css">
