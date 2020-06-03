@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 // We need to use sessions, so you should always start sessions using the below code.
@@ -57,13 +57,19 @@ if (!isset($_SESSION['loggedin'])) {
                                     <i class="flag-icon flag-icon-se"></i>
                                 </div>
                             </div>
-                            <span class="profile-text font-weight-medium d-none d-md-block">English</span>
+                            <span class="profile-text font-weight-medium d-none d-md-block">Blidö</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
                             <a class="dropdown-item">
                                 <div class="flag-icon-holder">
                                     <i class="flag-icon flag-icon-us"></i>
-                                </div>English
+                                </div>Blidö
+                            </a>
+
+                            <a class="dropdown-item">
+                                <div class="flag-icon-holder">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>Smultron
                             </a>
 
                         </div>
@@ -178,35 +184,11 @@ if (!isset($_SESSION['loggedin'])) {
             <!-- partial:../../partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
-                    <li class="nav-item nav-profile">
-                        <a href="#" class="nav-link">
-                            <div class="profile-image">
-                                <img class="img-xs rounded-circle" src="../../../assets/images/faces/face8.jpg" alt="profile image">
-                                <div class="dot-indicator bg-success"></div>
-                            </div>
-                            <div class="text-wrapper">
-                                <p class="profile-name">Admin</p>
-                                <p class="designation">Dancing monkey</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item nav-category">Main Menu</li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=" https://not4you.se/home.php">
-                            <i class="menu-icon typcn typcn-document-text"></i>
-                            <span class="menu-title">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=" https://not4you.se/configUpload.php">
-                            <i class="menu-icon typcn typcn-document-text"></i>
-                            <span class="menu-title">Upload new ESP file</span>
-                        </a>
-                    </li>
+
+                    <?php
+                    include('includes/side-nav.php');
+                    ?>
 
 
                 </ul>
             </nav>
-
-
-
