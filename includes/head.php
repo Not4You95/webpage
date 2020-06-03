@@ -92,6 +92,9 @@ if (!isset($_SESSION['loggedin'])) {
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
 
 
+                        <?php
+                            include('includes/bel-nof.php');
+                            ?>
 
 
                         </div>
@@ -101,11 +104,11 @@ if (!isset($_SESSION['loggedin'])) {
                             <img class="img-xs rounded-circle" src="../../../assets/images/faces-clipart/pic-4.jpg" alt="Profile image"> </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
 
-
-                            <?php
-                            include('includes/bel-nof.php');
+                        <?php
+                            include('includes/userDropDown.php');
                             ?>
 
+                           
                         </div>
                     </li>
                 </ul>
