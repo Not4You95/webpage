@@ -55,7 +55,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                             <div class="d-inline-flex mr-0 mr-md-3">
                                 <div class="flag-icon-holder">
-                                    <i class="flag-icon flag-icon-se"></i>
+                                    <i class="flag-icon ></i>
                                 </div>
                             </div>
                             <span class="profile-text font-weight-medium d-none d-md-block">Blidö</span>
@@ -63,13 +63,13 @@ if (!isset($_SESSION['loggedin'])) {
                         <div class="dropdown-menu dropdown-menu-left navbar-dropdown py-2" aria-labelledby="LanguageDropdown">
                             <a class="dropdown-item">
                                 <div class="flag-icon-holder">
-                                    <i class="flag-icon flag-icon-us"></i>
+                                    <i class="flag-icon"></i>
                                 </div>Blidö
                             </a>
 
                             <a class="dropdown-item">
                                 <div class="flag-icon-holder">
-                                    <i class="flag-icon flag-icon-us"></i>
+                                    <i class="flag-icon "></i>
                                 </div>Smultron
                             </a>
 
