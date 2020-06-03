@@ -29,7 +29,7 @@ include('includes/head.php');
                                 <form class="forms-sample" action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
                                     Select file:
 
-                                    <input type="file" name="file" id="file">
+                                    <input type="file" name="file" id="file"> <br>
                                     <input class="btn btn-success mr-2" type="submit" value="Upload Image" name="submit">
                                 </form>
                             </div>
