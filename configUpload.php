@@ -11,11 +11,10 @@ if (!isset($_SESSION['loggedin'])) {
 <!DOCTYPE html>
 <html>
 
-<?php include 'head.php';?>
-
+<html lang="en">
 
 <head>
-  
+<?php include 'head.php';?>
 </head>
 
 <body>
