@@ -55,7 +55,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <a class="nav-link dropdown-toggle px-2 d-flex align-items-center" id="LanguageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                             <div class="d-inline-flex mr-0 mr-md-3">
                                 <div class="flag-icon-holder">
-                                    <i class="flag-icon "></i>
+                                    <i class="flag-icon flag-icon-se"></i>
                                 </div>
                             </div>
                             <span class="profile-text font-weight-medium d-none d-md-block">Blidö</span>
