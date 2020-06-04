@@ -24,7 +24,7 @@ if(isset($_SESSION["user"]))
 } 
 else
 { 
-    header('Location: index.html'); 
+    header('Location: home.html'); 
 } 
 
 
