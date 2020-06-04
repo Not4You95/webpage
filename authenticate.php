@@ -7,14 +7,26 @@ session_start();
 echo "Hello world!<br />";
 echo $_POST;
 echo "<br />";
-$username = $_POST["username"]; 
+$username = $_POST["username"];
 
 
+// To check if session is started. 
+if (isset($_SESSION["user"])) {
+    if (time() - $_SESSION["login_time_stamp"] > 600) {
+        session_unset();
+        session_destroy();
+        header('Location: index.html');
+    }
 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: home.php");
-    exit;
+    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+        header("location: home.php");
+        exit;
+    }
+} else {
+    header('Location: index.html');
 }
+
+
 
 require_once "../config/config.php";
 
@@ -26,15 +38,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "Post !<br />";
 
-    if (empty(trim( $_POST["username"]  ))) {
+    if (empty(trim($_POST["username"]))) {
         $username_err = "Please enter username";
-    }else {
+    } else {
         $username = trim($_POST["username"]);
     }
 
-    if (empty(trim( $_POST["password"]  ))) {
+    if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter password";
-    }else {
+    } else {
         $password = trim($_POST["password"]);
     }
 
@@ -43,46 +55,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $sql = "SELECT id, username, password, email FROM accounts WHERE username = ?";
 
-        if ($stmt = mysqli_prepare($link,$sql) ) {
+        if ($stmt = mysqli_prepare($link, $sql)) {
             mysqli_stmt_bind_param($stmt, "s", $param_username);
         }
 
         $param_username = $username;
 
-        if(mysqli_stmt_execute($stmt)){
+        if (mysqli_stmt_execute($stmt)) {
             mysqli_stmt_store_result($stmt);
 
-            if(mysqli_stmt_num_rows($stmt) == 1){
+            if (mysqli_stmt_num_rows($stmt) == 1) {
 
-                mysqli_stmt_bind_result($stmt, $id,$username,$hashed_password,$email);
-                                
+                mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $email);
+
 
                 if (mysqli_stmt_fetch($stmt)) {
-                    if (password_verify($password,$hashed_password)) {
+                    if (password_verify($password, $hashed_password)) {
                         session_start();
 
                         // Store data in session variables
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
-                        $_SESSION["username"] = $username;     
+                        $_SESSION["username"] = $username;
                         // Login time is stored in a session variable 
                         $_SESSION["user"] = $username;
-	                    $_SESSION["login_time_stamp"] = time(); 
-                        
+                        $_SESSION["login_time_stamp"] = time();
+
                         // Redirect user to welcome page
                         header("location: register.php");
-
-                    }else{
+                    } else {
                         $password_err = "The password you entered was not valid.";
                         echo $password_err;
                     }
                 }
-            }else{
+            } else {
                 $username_err = "No account found with that username.";
                 echo $username_err;
             }
-
-        }else{
+        } else {
             echo "Oops! Something went wrong. Please try again later.";
         }
 
