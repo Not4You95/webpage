@@ -11,7 +11,7 @@ if (isset($_SESSION["user"])) {
     if (time() - $_SESSION["login_time_stamp"] > 600) {
         session_unset();
         session_destroy();
-        header('Location: index.html');
+        header('Location: index.php');
     }
 
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
@@ -19,7 +19,7 @@ if (isset($_SESSION["user"])) {
         exit;
     }
 } else {
-    header('Location: index.html');
+    header('Location: index.php');
 }
 ?>
 

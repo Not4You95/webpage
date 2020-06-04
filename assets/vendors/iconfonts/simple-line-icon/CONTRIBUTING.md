@@ -53,8 +53,8 @@ Pull requests are always welcome. We love those!
 Documentation is currently generated using `generate.php` file from `gh-pages` brunch.
 
   - Modify `generate.php`.
-  - Run `php generate.php > index.html`.
-  - Do not edit `index.html`.
+  - Run `php generate.php > index.php`.
+  - Do not edit `index.php`.
   - Documentation should be up-to-date with master.
 
   ___

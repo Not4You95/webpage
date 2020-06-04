@@ -14,7 +14,7 @@ $ bower install --save themify-icons
 ```
 
 ## Usage
-- Include `themify-icions` into your app `index.html` 
+- Include `themify-icions` into your app `index.php` 
 ```html
 <!doctype html>
 <html ng-app="app">

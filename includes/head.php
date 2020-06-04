@@ -11,12 +11,12 @@ if(isset($_SESSION["user"]))
     { 
         session_unset(); 
         session_destroy(); 
-        header('Location: index.html'); 
+        header('Location: index.php'); 
     } 
 } 
 else
 { 
-    header('Location: index.html'); 
+    header('Location: index.php'); 
 } 
 
 
