@@ -23,3 +23,9 @@
         <span class="menu-title">Upload new ESP file</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link" href=" https://not4you.se/register.php">
+        <i class="menu-icon typcn typcn-document-text"></i>
+        <span class="menu-title">Register new user</span>
+    </a>
+</li>
