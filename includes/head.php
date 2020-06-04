@@ -108,7 +108,6 @@ else
                             include('includes/bel-nof.php');
                             ?>
 
-
                         </div>
                     </li>
                     <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
