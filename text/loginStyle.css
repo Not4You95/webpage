@@ -1,29 +1,4 @@
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block; }
-
-
-body {
-   
-    
-}
-.login {    
-    min-height: 100vh;
-    min-width: 100vh;
-    background-color: #ffffff;
-    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
-    margin: 100px auto;
-}
 .login h1 {
     text-align: center;
     color: #5b6574;
