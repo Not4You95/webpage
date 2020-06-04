@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	                    $_SESSION["login_time_stamp"] = time(); 
                         
                         // Redirect user to welcome page
-                        header("location: home.php");
+                        header("location: register.php");
 
                     }else{
                         $password_err = "The password you entered was not valid.";
