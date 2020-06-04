@@ -8,6 +8,8 @@ echo "Hello world!<br />";
 echo $_POST;
 echo "<br />";
 
+
+
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: home.php");
     exit;
@@ -62,6 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $id;
                         $_SESSION["username"] = $username;     
+                        // Login time is stored in a session variable 
+	                    $_SESSION["login_time_stamp"] = time(); 
                         
                         // Redirect user to welcome page
                         header("location: home.php");
@@ -85,6 +89,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Close connection
     mysqli_close($link);
 }
-
-
-?>

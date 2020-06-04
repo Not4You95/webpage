@@ -8,6 +8,26 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 }
+
+
+session_start(); 
+  
+// To check if session is started. 
+if(isset($_SESSION["user"]))  
+{ 
+    if(time()-$_SESSION["login_time_stamp"] >600)   
+    { 
+        session_unset(); 
+        session_destroy(); 
+        header('Location: index.html'); 
+    } 
+} 
+else
+{ 
+    header('Location: index.html'); 
+} 
+
+
 ?>
 
 <!DOCTYPE html>
