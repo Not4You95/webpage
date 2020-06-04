@@ -6,7 +6,7 @@
 require_once "../config/config.php";
 $username = $password = "";
 $username_err = $password_err = "";
-$username = $_POST["username"];
+
 
 
 // To check if session is started. 

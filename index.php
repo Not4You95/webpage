@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 $username = $password = "";
@@ -7,17 +5,15 @@ $username_err = $password_err = "";
 $username = $_POST["username"];
 
 
-    
 
-    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-        if (time() - $_SESSION["login_time_stamp"] > 600) {
-            session_unset();
-            session_destroy();
-            header('Location: index.php');
-        }
-        header("location: home.php");
-        exit;
+
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    if (time() - $_SESSION["login_time_stamp"] > 600) {
+        header("location: logout.php");
     }
+    header("location: home.php");
+    exit;
+}
 
 ?>
 
@@ -29,8 +25,7 @@ $username = $_POST["username"];
     <meta charset="utf-8">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link href="text/loginStyle.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -41,15 +36,13 @@ $username = $_POST["username"];
             <label for="username">
                 <i class="fas fa-user"></i>
             </label>
-            <input type="text" name="username" placeholder="Username"
-                id="username" required>
+            <input type="text" name="username" placeholder="Username" id="username" required>
             <label for="password">
                 <i class="fas fa-lock"></i>
             </label>
-            <input type="password" name="password" placeholder="Password"
-                id="password" required>           
-            <input type="submit" name = "submit" value="Login">
-            
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" name="submit" value="Login">
+
         </form>
     </div>
 
