@@ -1,6 +1,7 @@
 
 
 <?php
+session_start();
 $username = $password = "";
 $username_err = $password_err = "";
 $username = $_POST["username"];
