@@ -7,6 +7,7 @@ session_start();
 echo "Hello world!<br />";
 echo $_POST;
 echo "<br />";
+$username = $_POST["username"]; 
 
 
 
@@ -65,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["id"] = $id;
                         $_SESSION["username"] = $username;     
                         // Login time is stored in a session variable 
+                        $_SESSION["user"] = $username;
 	                    $_SESSION["login_time_stamp"] = time(); 
                         
                         // Redirect user to welcome page
