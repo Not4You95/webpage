@@ -14,38 +14,42 @@ include('includes/head.php');
                                 <h4 class="card-title">Upload Code to ESP32</h4>
                                 <p class="card-description"></p>
 
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Device type</label>
-                                    <div class="col-sm-9">
-                                        <select class="form-control">
-                                            <option>ESP32</option>
-                                            <option>ESP CAM</option>
-                                            <option>STM32</option>
-                                            <option>Arduino Uno</option>
-                                        </select>
-                                    </div>
-                                </div>
 
-                                
 
                                 <form class="forms-sample" action="https://not4you.se/" method="post" enctype="multipart/form-data">
                                     <div class="form-group row">
-                                    <label class="col-sm-3 col-form-label">Device</label>
-                                    <div class="col-sm-9">
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+                                        <label class="col-sm-3 col-form-label">Device type</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control">
+                                                <option>ESP32</option>
+                                                <option>ESP CAM</option>
+                                                <option>STM32</option>
+                                                <option>Arduino Uno</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>
+
+
+
+                                <form class="forms-sample" action="https://not4you.se/" method="post" enctype="multipart/form-data">
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Device</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </form>
 
                                 <form class="forms-sample" action="https://not4you.se/upload.php" method="post" enctype="multipart/form-data">
                                     Select file:
 
-                                    <input type="file" name="file" id="file"> 
+                                    <input type="file" name="file" id="file">
                                     <input class="btn btn-success mr-2" type="submit" value="Upload Image" name="submit">
                                 </form>
                             </div>
