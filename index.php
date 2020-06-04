@@ -47,7 +47,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
                         <input type="username" name="username" id="username" class="form-control form-group" placeholder="username" required autofocus>
                         <input type="password" name="password" id="inputPassword" class="form-control form-group" placeholder="password" required autofocus>
-                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">enter</button>
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Enter</button>
                     </form><!-- /form -->
                 </div>
             </div>
