@@ -1,7 +1,6 @@
 <?php
 
 
-session_start();
 
 // https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
 require_once "../config/config.php";
@@ -11,15 +10,6 @@ $username = $_POST["username"];
 
 
 // To check if session is started. 
-
-
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: home.php");
-    exit;
-}
-
-
-
 
 
 
