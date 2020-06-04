@@ -11,20 +11,13 @@ $username = $_POST["username"];
 
 
 // To check if session is started. 
-if (isset($_SESSION["user"])) {
-    if (time() - $_SESSION["login_time_stamp"] > 600) {
-        session_unset();
-        session_destroy();
-        header('Location: index.php');
-    }
 
-    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-        header("location: home.php");
-        exit;
-    }
-} else {
-    header('Location: index.php');
+
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("location: home.php");
+    exit;
 }
+
 
 
 
