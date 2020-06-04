@@ -4,9 +4,9 @@
 session_start();
 
 // https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
-echo "Hello world!<br />";
-echo $_POST;
-echo "<br />";
+require_once "../config/config.php";
+$username = $password = "";
+$username_err = $password_err = "";
 $username = $_POST["username"];
 
 
@@ -28,10 +28,7 @@ if (isset($_SESSION["user"])) {
 
 
 
-require_once "../config/config.php";
 
-$username = $password = "";
-$username_err = $password_err = "";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
